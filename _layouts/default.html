@@ -1,13 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en-us">
+
   {% include head.html %}
+
   <body>
-    {% include header.html %}
-    <div class="page-content">
-      <div class="wrapper">
-        {{ content }}
+
+    <header class="masthead">
+      <div class="masthead-inner">
+        <p class="lead">{{ site.description }}</p>
+
+        <div class="colophon">
+          <ul class="colophon-links">
+            <li>
+              <a href="https://github.com/mdo/hyde/archive/v{{ site.version }}.zip">Download</a>
+            </li>
+            <li>
+              <a href="https://github.com/mdo/hyde">GitHub project</a>
+            </li>
+            made with <a href="http://jekyllrb.com/">dr jekyll</a><br>
+            and <a href="https://github.com/mdo/hyde">mr hyde</a>
+          </ul>
+        </div>
       </div>
+    </header>
+
+    <div class="content container">
+      {{ content }}
     </div>
-    {% include footer.html %}
+
   </body>
 </html>

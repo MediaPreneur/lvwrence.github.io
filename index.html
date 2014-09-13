@@ -1,11 +1,21 @@
 ---
-layout: page
-title: Home
+layout: default
 ---
-<html>
-  <head>
-  </head>
-  <body>
-      Hello world.
-  </body>
-</html>
+
+<div class="posts">
+  {% for post in site.posts %}
+  <div class="post">
+    <h1>
+      <a href="{{ post.url }}">
+        {{ post.title }}
+      </a>
+    </h1>
+
+    <span class="post-date">{{ post.date | date_to_string }}</span>
+
+    {{ post.content }}
+  </div>
+  {% endfor %}
+</div>
+
+</div>
