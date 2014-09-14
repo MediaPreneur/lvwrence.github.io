@@ -7,7 +7,7 @@
 
     <header class="masthead">
       <div class="masthead-inner">
-        <p class="lead">{{ site.description }}</p>
+        <p class="lead"></p>
 
         <div class="colophon">
           <ul class="colophon-links">
@@ -27,6 +27,18 @@
     <div class="content container">
       {{ content }}
     </div>
+
+    <script>
+      var terribleVariableName = ['((λ (x) (rot13 x)) "ynjerapr")',
+       'implemented a probability distribution for this randomized text\, thanks sta247',
+       'install gentoo',
+       'composition > inheritance, sue me',
+       'pabst! blue! ribbon!'
+      ];
+      var p = terribleVariableName[Math.floor(Math.random() * terribleVariableName.length)];
+
+      document.getElementsByClassName("lead")[0].innerHTML = p;
+    </script>
 
   </body>
 </html>

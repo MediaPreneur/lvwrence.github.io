@@ -1,8 +1,6 @@
 # Site settings
 title: 43.659612, -79.396832
 email: lawrence@lawrencewu.me
-description: > # this means to ignore newlines until "baseurl:"
-  ((λ (x) (rot13 x)) "Ynjerapr")
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://lawrencewu.me" # the base hostname & protocol for your site
 github_username:  oneohtrix
