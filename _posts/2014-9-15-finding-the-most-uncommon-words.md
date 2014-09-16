@@ -149,7 +149,7 @@ class Trie:
             d.pop("word?", None)
             d.pop("word")
 
-            keys = sorted(list(d.keys()))
+            keys = list(d.keys())
             for key in keys:
                 d[key]["word"] = current_word + key
                 queue.append(d[key])
@@ -179,14 +179,14 @@ Now:
 
 `python3 words.py > uncommon-words`
 
-And there you have it. uncommon-words now contains the most uncommon words in the dictionary, sorted by length and then alphabetical order. Looking at the end of the file, we can find words like
+And there you have it. uncommon-words now contains the most uncommon words in the dictionary, such as
 
-+ transubstantiationalist
-+ formaldehydesulphoxylate
-+ pathologicopsychological
-+ scientificophilosophical
-+ tetraiodophenolphthalein
-+ thyroparathyroidectomize
++ joskin
++ kendir
++ glazily
++ rubelet
++ suiform
++ bursicle
 
 Cool beans.
 
@@ -206,4 +206,5 @@ with open("dict-parsed") as dictfile, open("wiki-parsed-text") as wikifile:
 {% endhighlight %}
 takes about 1.5 seconds versus my trie-based implementation, which took 37 seconds.
 But I implemented a really cool data structure for a real-world application so who's really the winner here Jay?
+
 It's me. I am the winner.
