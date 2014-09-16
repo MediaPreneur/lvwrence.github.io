@@ -118,8 +118,6 @@ class Trie:
     def insert(self, x):
         trie = self._trie
 
-        # Go through trie, adding any missing keys.
-        # At the end, set `word?` indicator to true.
         for index, char in enumerate(x):
             if char not in trie:
                 trie[char] = {}
@@ -129,7 +127,6 @@ class Trie:
         return None
 
     def delete(self, x):
-        # Should not do anything if word not found
         trie = self._trie
         try:
             for index, char in enumerate(x):
@@ -146,10 +143,8 @@ class Trie:
         lst = []
         while queue:
             d = queue[0]
-            # only add word of current node to list
-            # if word? indicator is true
             current_word = d["word"]
-            if d.get("word?", False):
+            if d.get("word?"):
                 lst.append(current_word)
             d.pop("word?", None)
             d.pop("word")
