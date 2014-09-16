@@ -11,7 +11,7 @@ too complicated, but it is fun and I wanted to write a blog post
 so I'll show you the nitty gritty.
 
 If we remove all the common words from the set of all words,
-then it follows that we are left with only uncommon words.
+then it follows that we are left with only the uncommon ones.
 An easy source for the set of all words is /usr/share/dict/words,
 which is just a pre-installed file with newline-separated words.
 I say easy because everyone already has a copy and because it's
@@ -118,20 +118,23 @@ class Trie:
     def insert(self, x):
         trie = self._trie
 
-        for index, char in enumerate(list(x)):
+        # Go through trie, adding any missing keys.
+        # At the end, set `word?` indicator to true.
+        for index, char in enumerate(x):
             if char not in trie:
                 trie[char] = {}
             trie = trie[char]
-            if index == (len(list(x)) - 1) :
+            if index == (len(x) - 1) :
                 trie["word?"] = True
         return None
 
     def delete(self, x):
+        # Should not do anything if word not found
         trie = self._trie
         try:
-            for index, char in enumerate(list(x)):
+            for index, char in enumerate(x):
                 trie = trie[char]
-                if index == (len(list(x)) - 1):
+                if index == (len(x) - 1):
                     trie["word?"] = False
         except KeyError:
             return False
@@ -139,12 +142,14 @@ class Trie:
 
     def get_all_strings(self):
         trie = self._trie
-        stack = [trie]
+        queue = [trie]
         lst = []
-        while stack:
-            d = stack[0]
+        while queue:
+            d = queue[0]
+            # only add word of current node to list
+            # if word? indicator is true
             current_word = d["word"]
-            if d.get("word?", None):
+            if d.get("word?", False):
                 lst.append(current_word)
             d.pop("word?", None)
             d.pop("word")
@@ -152,8 +157,8 @@ class Trie:
             keys = sorted(list(d.keys()))
             for key in keys:
                 d[key]["word"] = current_word + key
-                stack.append(d[key])
-            stack.pop(0)
+                queue.append(d[key])
+            queue.pop(0)
         return lst
 {% endhighlight %}
 
@@ -206,3 +211,4 @@ with open("dict-parsed") as dictfile, open("wiki-parsed-text") as wikifile:
 {% endhighlight %}
 takes about 1.5 seconds versus my trie-based implementation, which took 43 seconds.
 But I implemented a really cool data structure for a real-world application so who's really the winner here Jay?
+
