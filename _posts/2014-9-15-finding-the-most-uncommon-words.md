@@ -3,7 +3,7 @@ layout: post
 title: Finding the most uncommon words
 ---
 Did you know that the URLs generated in [Berri](http://berri.io/) aren't
-short hashes but actually just really uncommon english words? If you
+short hashes but actually just really uncommon English words? If you
 thought your room name was randomly generated because it's
 unrecognizable, it might be interesting to look up what the
 definition is. Anyway, getting a list of uncommon words isn't
@@ -87,21 +87,25 @@ non-alphabetic characters and put each word in its own line so we can parse
 it the same way as /usr/share/dict/words. Let's break out some good old UNIX tools.
 
 First, we replace all non-alphabetic characters with spaces: 
+
 `tr -c "[:alpha:]" " " < wiki-raw-text > wiki-alpha-text`
 
 Next, slam everything down to lowercase (oh yeah do this for /words too): 
+
 `tr '[:upper:]' '[:lower:]' < wiki-alpha-text > wiki-lower-text`
 
 Finally, we can use sed to strip all whitespace and replace it with a newline,
 piping the result to sort and then uniq to only get unique words: 
+
 `sed -e "s/[[:space:]] */\n/g" wiki-lower-text | sort | uniq > wiki-parsed-text`
+
 (If you are on OS X, you will have to download `gnu-sed` using `brew install
 gnu-sed` for sed to read the newline character.)
 
 Now we've got a complete set of words and a set of common words. The running
 time for removing the common words from the complete set naively can get as
 bad as O(m * n) where m and n are the sizes of the sets. We can do a lot
-better using a Trie (link), which is optimized for looking up and deleting
+better using a [Trie](http://en.wikipedia.org/wiki/Trie), which is optimized for looking up and deleting
 data. Looking up data in a trie is only O(len(word)), which doesn't vary
 too widely, so removing a set M from the complete set should only take O(M)
 (after inserting all words, of course). Here's my python implementation of a Trie:
@@ -175,7 +179,7 @@ Now:
 
 `python3 words.py > uncommon-words`
 
-And there you have it. uncommon-words now contains the most uncommon words in the dictionary, sorted by length, then alphabetical order. Looking at the end of the file, we can find words like
+And there you have it. uncommon-words now contains the most uncommon words in the dictionary, sorted by length and then alphabetical order. Looking at the end of the file, we can find words like
 
 + transubstantiationalist
 + formaldehydesulphoxylate
@@ -185,3 +189,20 @@ And there you have it. uncommon-words now contains the most uncommon words in th
 + thyroparathyroidectomize
 
 Cool beans.
+
+Edit: My friend Jay pointed out that using the built-in set type was much faster than
+using a trie:
+{% highlight python3 linenos %}
+with open("dict-parsed") as dictfile, open("wiki-parsed-text") as wikifile:
+    all_words = set()
+    for line in dictfile:
+        word = line.rstrip("\n")
+        all_words.add(word)
+    common_words = set()
+    for line in wikifile:
+        word = line.rstrip("\n")
+        common_words.add(word)
+    print(all_words - common_words)
+{% endhighlight %}
+takes about 1.5 seconds versus my trie-based implementation, which took 43 seconds.
+But I implemented a really cool data structure for a real-world application so who's really the winner here Jay?
