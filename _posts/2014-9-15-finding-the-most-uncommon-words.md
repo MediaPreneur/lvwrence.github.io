@@ -204,6 +204,6 @@ with open("dict-parsed") as dictfile, open("wiki-parsed-text") as wikifile:
         common_words.add(word)
     print(all_words - common_words)
 {% endhighlight %}
-takes about 1.5 seconds versus my trie-based implementation, which took 43 seconds.
+takes about 1.5 seconds versus my trie-based implementation, which took 37 seconds.
 But I implemented a really cool data structure for a real-world application so who's really the winner here Jay?
-
+It's me. I am the winner.
