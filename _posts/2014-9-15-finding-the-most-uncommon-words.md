@@ -105,7 +105,7 @@ gnu-sed` for sed to read the newline character.)
 Now we've got a complete set of words and a set of common words. The running
 time for removing the common words from the complete set naively can get as
 bad as O(m * n) where m and n are the sizes of the sets. We can do a lot
-better using a [Trie](http://en.wikipedia.org/wiki/Trie), which is optimized for looking up and deleting
+better using a [Trie](http://en.wikipedia.org/wiki/Trie), which is a super hip data structure optimized for looking up and deleting
 strings. Looking up a word in a trie is only O(len(word)), which doesn't vary
 too widely, so removing a set M from the complete set should only take O(M)
 (after inserting all words, of course). Here's my Python implementation of a Trie:
