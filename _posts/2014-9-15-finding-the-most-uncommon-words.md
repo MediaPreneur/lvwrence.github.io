@@ -157,7 +157,7 @@ class Trie:
         return lst
 {% endhighlight %}
 
-And my python script that adds all the words to the trie, removes the
+And my Python script that adds all the words to the trie, removes the
 ones we've parsed, and prints out the remaining ones:
 
 {% highlight python3 linenos %}
