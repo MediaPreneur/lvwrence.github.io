@@ -108,7 +108,7 @@ bad as O(m * n) where m and n are the sizes of the sets. We can do a lot
 better using a [Trie](http://en.wikipedia.org/wiki/Trie), which is optimized for looking up and deleting
 strings. Looking up a word in a trie is only O(len(word)), which doesn't vary
 too widely, so removing a set M from the complete set should only take O(M)
-(after inserting all words, of course). Here's my python implementation of a Trie:
+(after inserting all words, of course). Here's my Python implementation of a Trie:
 
 {% highlight python3 linenos %}
 class Trie:
