@@ -27,5 +27,4 @@ atomic.get("https://dl.dropboxusercontent.com/u/71948195/last-commit").success(f
   var time = new Date(data * 1000);
 
   document.getElementById("last-commit").innerHTML = "last commit " + timeSince(time) + " ago";
-  console.log(timeSince(time) + " ago");
 })
