@@ -79,7 +79,7 @@ $$
 A[i, j] =
 \cases{
 i  & \text{if } j = 0\cr
-j & \text{if } ji= 0\cr
+j & \text{if } i= 0\cr
 A[i - 1, j - 1] & \text{if } s1[i] = s2[j]\cr
 min(A[i-1, j], A[i, j-1], A[i - 1, j - 1]) + 1 & \text{if } s1[i] \neq s2[j]
 }
