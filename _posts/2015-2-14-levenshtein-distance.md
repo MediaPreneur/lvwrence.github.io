@@ -18,13 +18,13 @@ between two strings.
 The key insight required to understand this algorithm is -- as usual -- recursive.
 Notice that if we have the edit distance d between two strings minus the first
 character, then the actual edit distance will be d + 1 only if the first characters
-of both strings are not the same. Take the words "jewels" and "mogwai": assuming
+of both strings are not the same. Take the words ["jewels"](https://www.youtube.com/watch?v=OUjVpeHpkQ0) and ["mogwai"](https://www.youtube.com/watch?v=Gg1d5oXiwuU): assuming
 we have the edit distance between "ewels" and "ogwai" (5), then the actual distance
 will be 6, since "j" and "m" are different. We can simply apply this rule until
 we hit the end of one (or both) of the strings. Then the edit distance will just
 be the length of the remaining string, as we just can add the requisite characters.
 The astute reader will notice that there is a mistake in our analysis, however:
-we've only covered the substitution rule. Evaluating "godspeed" and "speed" using
+we've only covered the substitution rule. Evaluating ["godspeed"](https://www.youtube.com/watch?v=hu0kGvKujCg) and "speed" using
 this rule would result in an edit distance of 8, which is clearly wrong, since
 we should be able to do it in 3 moves by deleting "god" from "godspeed". We can
 support suffix alignment by computing our first rule, then the edit distance
