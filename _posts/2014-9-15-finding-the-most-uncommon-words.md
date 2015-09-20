@@ -90,7 +90,7 @@ First, we replace all non-alphabetic characters with spaces:
 
 `tr -c "[:alpha:]" " " < wiki-raw-text > wiki-alpha-text`
 
-Next, slam everything down to lowercase (oh yeah do this for /words too): 
+Next, slam everything down to lowercase (oh yeah, do this for /words too): 
 
 `tr '[:upper:]' '[:lower:]' < wiki-alpha-text > wiki-lower-text`
 

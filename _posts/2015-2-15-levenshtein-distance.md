@@ -66,7 +66,7 @@ def levenshtein(s1, s2):
     return memo[(s1, s2)]
 {% endhighlight %}
 
-But that's easy and boring. Plus, there's still a lot of memory overhead from
+That's easy, but boring. Plus, there's still a lot of memory overhead from
 the stack frames generated from all the recursion. Let's take a bottom-up approach
 to the problem instead. The actual Wagner-Fischer algorithm uses a two-dimensional
 array (or matrix) to hold the edit distances between prefixes of each string.
