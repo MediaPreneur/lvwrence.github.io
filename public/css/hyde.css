@@ -237,6 +237,13 @@ a:focus {
   margin-top: 0;
   font-family: "Abril Fatface";
 }
+
+.masthead .avatar img {
+    margin: 6em auto;
+    border-radius: 50%;
+    width: 150px;
+}
+
 .masthead .lead {
   margin-bottom: 0;
 }
