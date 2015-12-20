@@ -7,4 +7,3 @@ University of Toronto. I'm interested in startups, software
 development, programming languages, and systems design.
 
 I hack with vim, git, and my Mac.
-
