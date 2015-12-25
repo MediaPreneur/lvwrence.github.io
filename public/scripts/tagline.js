@@ -5,7 +5,7 @@ var possibleTaglines = [
   '37°47\'12.1" N, 122°23\'59.4" W',
   '{"status": "200 OK", "data": {"name": "lawrence", "age": 21, "location": "toronto"}}',
   '(◕ᴥ◕)',
-  '\'lawrence\':: [Char]'
+  '"lawrence":: [Char]'
 ];
 var tagline = possibleTaglines[Math.floor(Math.random() * possibleTaglines.length)];
 
