@@ -65,7 +65,7 @@ to prettify it for us:
 {% endhighlight %}
 
 That worked way better than I expected. So `sec` is generated from a function
-`s`, which takes in `email`, `y` (which is pointz), and `token`. What's 's'?
+`s`, which takes in `email`, `y` (which is pointz), and `token`. What's `s`?
 
 {% highlight javascript %}
 function s(email, val, v) {
