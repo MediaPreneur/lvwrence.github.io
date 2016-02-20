@@ -1,3 +1,8 @@
+---
+layout: post
+title: Wham Bam, Slam Jam
+---
+
 This past week, [Slam Jam Socialism](http://www.slamjamsocialism.com/) ran an
 [online arcade](http://www.slamjamsocialism.com/arcad-ism) for a chance to win
 some Yeezy Boost 350s. My friend Marc sent me the link and asked if I could
