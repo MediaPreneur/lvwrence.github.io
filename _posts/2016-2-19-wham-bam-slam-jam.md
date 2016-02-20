@@ -11,7 +11,7 @@ hack the leaderboards and cop some shoes. Here's how I did it.
 <img src="http://i.imgur.com/H0AsTXQ.gif" style="max-width: 80%; margin: 0 auto;" />
 
 The game was a single-player version of Pong, written in plain JavaScript
-using \<canvas\>. Each time the ball hits a paddle, you get a point and it
+using `<canvas>`. Each time the ball hits a paddle, you get a point and it
 speeds up until you inevitably lose. While playing the game, I had Chrome's
 Network tab to see how it reported actions to the server.
 
