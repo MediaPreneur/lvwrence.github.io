@@ -12,6 +12,21 @@ var possibleTaglines = [
   'print("hello world")',
   'NSLog("hello world");'
 ];
+
+// make sure we don't see the same tagline consecutively
+if (localStorage.getItem('tagline')) {
+  var tagline = localStorage.getItem('tagline');
+  var i = possibleTagLines.indexOf(tagline);
+  if (i > -1) {
+    possibleTaglines.splice(i, 1);
+  }
+}
+
+// choose a tagline
 var tagline = possibleTaglines[Math.floor(Math.random() * possibleTaglines.length)];
 
+// set DOM to chosen tagline
 document.getElementsByClassName("lead")[0].innerHTML = tagline;
+
+// save current tagline to localstorage
+localStorage.setItem('tagline', tagline);
