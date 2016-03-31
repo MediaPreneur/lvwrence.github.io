@@ -16,7 +16,7 @@ var possibleTaglines = [
 // make sure we don't see the same tagline consecutively
 if (localStorage.getItem('tagline')) {
   var tagline = localStorage.getItem('tagline');
-  var i = possibleTagLines.indexOf(tagline);
+  var i = possibleTaglines.indexOf(tagline);
   if (i > -1) {
     possibleTaglines.splice(i, 1);
   }
