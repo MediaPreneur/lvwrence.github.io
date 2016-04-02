@@ -2,8 +2,10 @@ d3.json("http://162.243.145.24/dashboard", function(err, data) {
   if (err) {
     console.warn(err);
   }
+  console.log(data);
 
-  renderCodeGraph(data["code"]);
+  renderCodeGraph(data["coding"]);
+  renderLiftTable(data["lifting"]);
 })
 
 function renderCodeGraph(data) {
@@ -37,4 +39,7 @@ function renderCodeGraph(data) {
   };
 
   Plotly.newPlot("codeChart", loggedCodingData, layout, {displayModeBar: false, staticPlot: true});
+}
+
+function renderLiftTable(data) {
 }
