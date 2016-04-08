@@ -34,13 +34,18 @@ function renderLoggedTime(data) {
       hours: moment.duration(obj['total_seconds'], 'seconds').asHours()
     }
   });
-	var svg = dimple.newSvg("#logged-time", 500, 400);
+	var svg = dimple.newSvg("#logged-time", "100%", "100%");
   var loggedTimeChart = new dimple.chart(svg, loggedTime);
-  loggedTimeChart.setBounds(60, 30, 510, 305)
+  loggedTimeChart.setBounds("10%", "10%", "80%", "80%")
   var x = loggedTimeChart.addTimeAxis("x", "day", "%Y-%m-%d", "%a");
   var y = loggedTimeChart.addMeasureAxis("y", "hours");
+  x.title = null;
   y.title = "Hours";
   x.floatingBarWidth = 40;
   loggedTimeChart.addSeries(null, dimple.plot.bar);
   loggedTimeChart.draw(2000);
+
+  window.onresize = function() {
+    loggedTimeChart.draw(0, true);
+  }
 }
