@@ -1,24 +1,28 @@
 requirejs.config({
   paths: {
-    "chartjs": "https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.1.0/Chart.min",
     "momentjs": "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min",
-    "d3": "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min"
+    "d3": "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min",
+    "superagent": "https://cdnjs.cloudflare.com/ajax/libs/superagent/1.2.0/superagent.min"
   }
 });
 
 var moment;
-require(["chartjs", "momentjs", "d3"], function(Chart, momentjs, d3) {
+require(["momentjs", "d3", "superagent"], function(momentjs, d3, request) {
   moment = momentjs;
-  atomic
-    .get("http://162.243.145.24/dashboard")
-    .success(function(data, xhr) {
-      renderCodeGraph(data["coding"]);
-    })
-    .error(function(data, xhr) {
-      console.log(data);
-    });
+  request
+  .get("http://162.243.145.24/dashboard")
+  .end(function(err, res) {
+    renderDailyAverage(res.body);
+    // renderCodeGraph(data["coding"]);
+  });
 });
 
+function renderDailyAverage(data) {
+  var dailyAverage = data['coding']['daily_average'];
+  var duration = moment.duration(dailyAverage, 'seconds').humanize();
+  var innerHTML = "On average, I code for <strong>" + duration + "</strong> per day."
+  document.getElementById("daily-average").innerHTML = innerHTML;
+}
 
 function renderCodeGraph(data) {
   console.log(data);
