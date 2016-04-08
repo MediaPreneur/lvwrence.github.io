@@ -29,19 +29,20 @@ function renderLoggedTime(data) {
   var loggedTime = data['coding']['past_week'];
   // massage the data a lil bit here
   loggedTime = loggedTime.map(function(obj) {
+    console.log(obj['date']);
     return {
-      day: obj['date'],
+      day: moment(obj['date']).format("MMM Do"),
       hours: moment.duration(obj['total_seconds'], 'seconds').asHours()
     }
   });
 	var svg = dimple.newSvg("#logged-time", "100%", "100%");
   var loggedTimeChart = new dimple.chart(svg, loggedTime);
   loggedTimeChart.setBounds("10%", "10%", "80%", "80%")
-  var x = loggedTimeChart.addTimeAxis("x", "day", "%Y-%m-%d", "%a");
+  var x = loggedTimeChart.addCategoryAxis("x", "day");
+  x.addOrderRule("day");
   var y = loggedTimeChart.addMeasureAxis("y", "hours");
   x.title = null;
   y.title = "Hours";
-  x.floatingBarWidth = 40;
   loggedTimeChart.addSeries(null, dimple.plot.bar);
   loggedTimeChart.draw(2000);
 
