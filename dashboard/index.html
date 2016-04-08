@@ -4,6 +4,12 @@ title: Dashboard
 permalink: /dashboard/
 ---
 <link rel="stylesheet" href="/public/css/dashboard.css">
+<script type="text/javascript">
+    function resizeIframe(iframe) {
+        iframe.height = iframe.contentWindow.document.body.scrollHeight + "px";
+    }
+</script>
+
 <div class="wrapper">
-  <iframe src="/embedded-dashboard" frameBorder="0"></iframe>
+  <iframe src="/embedded-dashboard" onload="resizeIframe(this)" frameBorder="0"></iframe>
 </div>
