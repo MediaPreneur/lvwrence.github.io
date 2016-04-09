@@ -13,8 +13,9 @@ require(["momentjs", "d3", "superagent", "dimple"], function(momentjs, d3, reque
   request
   .get("http://162.243.145.24/dashboard")
   .end(function(err, res) {
-    renderDailyAverage(res.body);
     renderLoggedTime(res.body);
+    renderLoggedToday(res.body);
+    renderDailyAverage(res.body);
   });
 });
 
@@ -25,11 +26,17 @@ function renderDailyAverage(data) {
   document.getElementById("daily-average").innerHTML = innerHTML;
 }
 
+function renderLoggedToday(data) {
+  var loggedTime = data['coding']['logged_today'];
+  var duration = moment.duration(loggedTime, 'seconds').humanize();
+  var innerHTML = "I coded for <strong>" + duration + "</strong> today."
+  document.getElementById("logged-today").innerHTML = innerHTML;
+}
+
 function renderLoggedTime(data) {
   var loggedTime = data['coding']['past_week'];
   // massage the data a lil bit here
   loggedTime = loggedTime.map(function(obj) {
-    console.log(obj['date']);
     return {
       day: moment(obj['date']).format("MMM Do"),
       hours: moment.duration(obj['total_seconds'], 'seconds').asHours()
