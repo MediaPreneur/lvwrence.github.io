@@ -1,4 +1,4 @@
-#dashboard html, #dashboard body, #dashboard body div, #dashboard span, #dashboard object, #dashboard iframe, #dashboard h1, #dashboard h2, #dashboard h3, #dashboard h4, #dashboard h5, #dashboard h6, #dashboard p, #dashboard blockquote, #dashboard pre, #dashboard abbr, #dashboard address, #dashboard cite, #dashboard code, #dashboard del, #dashboard dfn, #dashboard em, #dashboard img, #dashboard ins, #dashboard kbd, #dashboard q, #dashboard samp, #dashboard small, #dashboard strong, #dashboard sub, #dashboard sup, #dashboard var, #dashboard b, #dashboard i, #dashboard dl, #dashboard dt, #dashboard dd, #dashboard ol, #dashboard ul, #dashboard li, #dashboard fieldset, #dashboard form, #dashboard label, #dashboard legend, #dashboard table, #dashboard caption, #dashboard tbody, #dashboard tfoot, #dashboard thead, #dashboard tr, #dashboard th, #dashboard td, #dashboard article, #dashboard aside, #dashboard figure, #dashboard footer, #dashboard header, #dashboard menu, #dashboard nav, #dashboard section, #dashboard time, #dashboard mark, #dashboard audio, #dashboard video, #dashboard details, #dashboard summary {
+#dashboard, #dashboard div, #dashboard span, #dashboard object, #dashboard iframe, #dashboard h1, #dashboard h2, #dashboard h3, #dashboard h4, #dashboard h5, #dashboard h6, #dashboard p, #dashboard blockquote, #dashboard pre, #dashboard abbr, #dashboard address, #dashboard cite, #dashboard code, #dashboard del, #dashboard dfn, #dashboard em, #dashboard img, #dashboard ins, #dashboard kbd, #dashboard q, #dashboard samp, #dashboard small, #dashboard strong, #dashboard sub, #dashboard sup, #dashboard var, #dashboard b, #dashboard i, #dashboard dl, #dashboard dt, #dashboard dd, #dashboard ol, #dashboard ul, #dashboard li, #dashboard fieldset, #dashboard form, #dashboard label, #dashboard legend, #dashboard table, #dashboard caption, #dashboard tbody, #dashboard tfoot, #dashboard thead, #dashboard tr, #dashboard th, #dashboard td, #dashboard article, #dashboard aside, #dashboard figure, #dashboard footer, #dashboard header, #dashboard menu, #dashboard nav, #dashboard section, #dashboard time, #dashboard mark, #dashboard audio, #dashboard video, #dashboard details, #dashboard summary {
   margin: 0;
   padding: 0;
   border: 0;
@@ -12,7 +12,7 @@
   display: block;
 }
 
-#dashboard html {
+#dashboard {
   box-sizing: border-box;
 }
 
@@ -28,7 +28,7 @@
   max-width: 100%;
 }
 
-#dashboard html {
+#dashboard {
   overflow-y: scroll;
 }
 
@@ -187,7 +187,7 @@
   }
 }
 
-#dashboard html {
+#dashboard {
   background: #f5f7fa;
   font-size: 14px;
   -moz-osx-font-smoothing: grayscale;
@@ -198,11 +198,11 @@
   text-rendering: optimizeLegibility;
 }
 
-#dashboard html.has-modal-open {
+#dashboard .has-modal-open {
   overflow: hidden;
 }
 
-#dashboard body,
+#dashboard,
 #dashboard button,
 #dashboard input,
 #dashboard select,
