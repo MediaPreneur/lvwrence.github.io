@@ -44,7 +44,7 @@ function renderLoggedTime(data) {
   });
 	var svg = dimple.newSvg("#logged-time", "100%", "100%");
   var loggedTimeChart = new dimple.chart(svg, loggedTime);
-  loggedTimeChart.setBounds("10%", "10%", "80%", "80%")
+  loggedTimeChart.setBounds("5%", "5%", "90%", "80%")
   var x = loggedTimeChart.addCategoryAxis("x", "day");
   x.addOrderRule("day");
   var y = loggedTimeChart.addMeasureAxis("y", "hours");
