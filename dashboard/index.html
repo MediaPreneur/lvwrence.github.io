@@ -5,38 +5,63 @@ permalink: /dashboard/
 ---
 <div id="dashboard">
     <section class="section">
-        <div class="container">
-            <!--<h1 class="title is-1">Dashboard</h1>-->
-            <!-- Daily Coding Average -->
-            <div class="card is-fullwidth">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        Daily Average
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content" id="daily-average">
-                        <!-- Stuff will be inserted here -->
+        <div class="container is-fluid">
+            <div class="columns">
+                <!-- Daily Average -->
+                <div class="column is-half">
+                    <div class="card is-fullwidth">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Daily Average
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content" id="daily-average">
+                                <!-- Stuff will be inserted here -->
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <!-- /Daily Average -->
+
+                <!-- Daily Average -->
+                <div class="column is-half">
+                    <div class="card is-fullwidth">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Time logged today
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content" id="daily-average">
+                                I coded <strong>4 hours</strong> today.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /Daily Average -->
+
             </div>
 
-            <br>
-
-            <!-- Coding Bar Graph -->
-            <div class="card is-fullwidth">
-                <header class="card-header">
-                    <p class="card-header-title">
-                        Logged Time
-                    </p>
-                </header>
-                <div class="card-content">
-                    <div class="content" id="logged-time">
-                        <!-- Stuff will be inserted here -->
+            <div class="columns">
+                <!-- Logged Time -->
+                <div class="column">
+                    <div class="card is-fullwidth">
+                        <header class="card-header">
+                            <p class="card-header-title">
+                                Logged Time
+                            </p>
+                        </header>
+                        <div class="card-content">
+                            <div class="content" id="logged-time">
+                                <!-- Stuff will be inserted here -->
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
-    <script data-main="/public/scripts/dashboard.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" defer></script>
+    </div>
+</section>
+<script data-main="/public/scripts/dashboard.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" defer></script>
 </div>
