@@ -320,8 +320,9 @@
     max-width: 960px;
   }
   #dashboard .container.is-fluid {
-    margin: 0 20px;
     max-width: none;
+    width: 90%;
+    margin: 0 auto;
   }
 }
 
