@@ -12,13 +12,18 @@ requirejs.config({
 var moment;
 var _;
 require(["momentjs", "d3", "superagent", "dimple", "lodash", "c3", "programming", "fitness"],
-function(momentjs, d3, request, dimple, _, c3, renderProgramming, renderFitness) {
-  moment = momentjs;
-  _ = _;
+function(moment, d3, request, dimple, _, c3, renderProgramming, renderFitness) {
+  var deps = {
+    moment: moment,
+    d3: d3,
+    c3: c3
+  };
+
   request
   .get("http://162.243.145.24/dashboard")
   .end(function(err, res) {
-    renderProgramming(res.body);
-    renderFitness(res.body);
+    var data = res.body;
+    renderProgramming(data, deps);
+    renderFitness(data, deps);
   });
 });
