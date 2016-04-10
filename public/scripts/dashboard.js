@@ -20,8 +20,8 @@ require(["momentjs", "d3", "superagent", "dimple", "lodash"], function(momentjs,
     renderLoggedToday(res.body);
     renderDailyAverage(res.body);
     renderLastWorkout(res.body);
+    renderCurrentAge();
   });
-  renderCurrentAge();
 });
 
 function renderDailyAverage(data) {
@@ -67,18 +67,20 @@ function renderLoggedTime(data) {
 }
 
 function renderLastWorkout(data) {
-  var mostRecentWorkout;
+  var mostRecentWorkout = null;
   _.forOwn(data['lifting'], function(stats, lift) {
     var mostRecentLift = stats[0];
     var dateOfMostRecentLift = moment(mostRecentLift['date']);
-    if (!mostRecentWorkout) {
+    if (mostRecentWorkout === null) {
       mostRecentWorkout = dateOfMostRecentLift;
     }
-    if (dateOfMostRecentLift.isBefore(mostRecentWorkout)) {
+    if (dateOfMostRecentLift.isSameOrAfter(mostRecentWorkout)) {
       mostRecentWorkout = dateOfMostRecentLift;
     }
   });
   // now mostRecentWorkout is initialized
+  var innerHTML = "<p>My last workout was <strong>" + mostRecentWorkout.fromNow() + "</strong>.</p>"
+  document.getElementById("last-workout").innerHTML = innerHTML;
 }
 
 function renderCurrentAge() {
