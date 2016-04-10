@@ -9,10 +9,11 @@ requirejs.config({
   }
 });
 
-var moment;
-var _;
 require(["momentjs", "d3", "superagent", "dimple", "lodash", "c3", "programming", "fitness"],
 function(moment, d3, request, dimple, _, c3, renderProgramming, renderFitness) {
+  var dashboardDisplay = document.getElementById('dashboard-container');
+  var dashboardLoading = document.getElementById('dashboard-loading');
+
   var deps = {
     moment: moment,
     d3: d3,
@@ -22,6 +23,9 @@ function(moment, d3, request, dimple, _, c3, renderProgramming, renderFitness) {
   request
   .get("http://162.243.145.24/dashboard")
   .end(function(err, res) {
+    dashboardDisplay.style.display = 'block';
+    dashboardLoading.style.display = 'none';
+
     var data = res.body;
     renderProgramming(data, deps);
     renderFitness(data, deps);

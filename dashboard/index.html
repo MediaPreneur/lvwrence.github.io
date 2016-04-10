@@ -5,7 +5,7 @@ permalink: /dashboard/
 ---
 <div id="dashboard">
     <section class="section">
-        <div class="container is-fluid">
+        <div class="container is-fluid" id="dashboard-container" style="display:none;">
             <h1 class="title">Programming</h1>
             <div class="columns">
                 <!-- Daily Average -->
@@ -105,9 +105,9 @@ permalink: /dashboard/
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
+    <div class="container is-fluid sk-spinner sk-spinner-pulse" id="dashboard-loading"></div>
 </section>
 <script data-main="/public/scripts/dashboard.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" defer></script>
 </div>
