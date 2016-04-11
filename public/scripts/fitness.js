@@ -23,13 +23,15 @@ define(function() {
 
     function renderCurrentAge(data) {
       var setAge = function() {
-        var dob = moment.unix(781315200);
-        var diff = moment().diff(dob);
-        var age = _.round(diff / 1000 / 60 / 60 / 24 / 365, 10);
+        var now = Date.now();
+        var dob = 781315200000;
+        var diff = now - dob;
+        var age = diff / 1000 / 60 / 60 / 24 / 365;
+        var age = age.toFixed(9);
         var innerHTML = "<p>I am <strong>"+ age + "</strong> years old.</p>"
         document.getElementById("current-age").innerHTML = innerHTML;
       }
-      setInterval(setAge, 100);
+      setInterval(setAge, 1);
     }
 
     function renderLiftProgress(data) {

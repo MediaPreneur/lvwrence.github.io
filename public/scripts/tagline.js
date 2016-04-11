@@ -34,12 +34,12 @@ if (tagline === SPECIAL_INTERACTIVE_TAGLINE) {
     var dob = 781315200000;
     var diff = now - dob;
     var age = diff / 1000 / 60 / 60 / 24 / 365;
-    var fixedAge = age.toFixed(10);
+    var fixedAge = age.toFixed(9);
     // do some special rendering logic
     var specialTagline = '{"status": "200 OK", "data": {"name": "lawrence", "age": ' + fixedAge + ', "location": "montreal"}}';
     document.getElementsByClassName("lead")[0].innerHTML = specialTagline;
   }
-  setInterval(renderCurrentAgeInTagline, 200);
+  setInterval(renderCurrentAgeInTagline, 1);
   } else {
   document.getElementsByClassName("lead")[0].innerHTML = tagline;
 }
