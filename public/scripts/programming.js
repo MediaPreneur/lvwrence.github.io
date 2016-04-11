@@ -47,7 +47,16 @@ define(function() {
               tick: {
                 format: '%B %d'
               }
+            },
+            y: {
+              label: 'Hours'
             }
+          },
+          legend: {
+            hide: true
+          },
+          tooltip: {
+            show: false
           }
         });
       }
