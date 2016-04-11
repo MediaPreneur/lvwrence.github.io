@@ -17,7 +17,8 @@ function(moment, d3, request, dimple, _, c3, renderProgramming, renderFitness) {
   var deps = {
     moment: moment,
     d3: d3,
-    c3: c3
+    c3: c3,
+    _: _
   };
 
   request
