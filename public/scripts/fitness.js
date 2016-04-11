@@ -68,7 +68,7 @@ define(function() {
               show: false
             },
             transition: {
-              duration: 3000
+              duration: 1000
             }
         });
       }
