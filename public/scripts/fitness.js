@@ -33,25 +33,46 @@ define(function() {
     }
 
     function renderLiftProgress(data) {
-      c3.generate({
-          bindto: '#lift-progress',
-          data: {
-              x: 'x',
-              columns: [
-                  ['x', '2013-01-01', '2013-01-02', '2013-01-03', '2013-01-04', '2013-01-05', '2013-01-06'],
-                  ['data1', 30, 200, 100, 400, 150, 250],
-                  ['data2', 130, 340, 200, 500, 250, 350]
-              ]
-          },
-          axis: {
-              x: {
-                  type: 'timeseries',
-                  tick: {
-                      format: '%Y-%m-%d'
-                  }
-              }
-          }
-      });
+      function generateChart() {
+        var chart = c3.generate({
+            bindto: '#lift-progress',
+            data: {
+                xs: {
+                  'Overhead Press': 'x1',
+                  'Bench': 'x2',
+                  'Squat': 'x3',
+                  'Deadlift': 'x4'
+                },
+                columns: [
+                    ['x1', '2016-03-23', '2016-03-28', '2016-04-03'],
+                    ['x2', '2016-03-21', '2016-03-26', '2016-03-30', '2016-04-05'],
+                    ['x3', '2016-03-21', '2016-03-23', '2016-03-26', '2016-03-28', '2016-03-30', '2016-04-03', '2016-04-05'],
+                    ['x4', '2016-03-23', '2016-03-28', '2016-04-03'],
+                    ['Overhead Press', 95, 95, 95],
+                    ['Bench', 135, 140, 145, 145],
+                    ['Squat', 275, 280, 285, 285, 285, 290, 290],
+                    ['Deadlift', 135, 145, 185],
+                ]
+            },
+            axis: {
+                x: {
+                    type: 'timeseries',
+                    tick: {
+                        format: '%Y-%m-%d'
+                    }
+                }
+            }
+        });
+      }
+
+      generateChart();
+      var onresize = window.onresize;
+      window.onresize = function () {
+        if (onresize) {
+          onresize();
+        }
+        generateChart();
+      }
     }
 
     renderLastWorkout(data);
