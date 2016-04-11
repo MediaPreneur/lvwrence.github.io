@@ -25,9 +25,9 @@ define(function() {
           hours: moment.duration(obj['total_seconds'], 'seconds').asHours()
         }
       });
-      var svg = dimple.newSvg("#logged-time", "100%", "100%");
+      var svg = dimple.newSvg("#logged-time", "100%", "300px");
       var loggedTimeChart = new dimple.chart(svg, loggedTime);
-      loggedTimeChart.setBounds("5%", "5%", "90%", "80%")
+      loggedTimeChart.setBounds("5%,20px", "10%", "90%", "75%")
       var x = loggedTimeChart.addCategoryAxis("x", "day");
       x.addOrderRule("day");
       var y = loggedTimeChart.addMeasureAxis("y", "hours");
@@ -37,7 +37,7 @@ define(function() {
       series.lineWeight = 5;
       // series.lineMarkers = true;
       series.barGap = 0.6;
-      loggedTimeChart.draw(2000);
+      loggedTimeChart.draw(3000);
 
       window.onresize = function() {
         loggedTimeChart.draw(0, true);
