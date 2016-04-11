@@ -57,6 +57,9 @@ define(function() {
           },
           tooltip: {
             show: false
+          },
+          transition: {
+            duration: 3000
           }
         });
       }

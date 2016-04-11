@@ -63,6 +63,12 @@ define(function() {
                         format: '%Y-%m-%d'
                     }
                 }
+            },
+            tooltip: {
+              show: false
+            },
+            transition: {
+              duration: 3000
             }
         });
       }
