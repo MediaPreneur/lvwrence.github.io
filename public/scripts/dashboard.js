@@ -22,7 +22,7 @@ function(moment, d3, request, dimple, _, c3, renderProgramming, renderFitness) {
   };
 
   request
-  .get("http://162.243.145.24/dashboard")
+  .get("https://lawrencewu.herokuapp.com/dashboard")
   .end(function(err, res) {
     dashboardDisplay.style.display = 'block';
     dashboardLoading.style.display = 'none';

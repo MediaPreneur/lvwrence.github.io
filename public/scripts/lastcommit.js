@@ -25,7 +25,7 @@ function timeSince(date) {
 }
 
 function setLastCommit() {
-  atomic.get("http://162.243.145.24/lastcommit").success(function (data, xhr) {
+  atomic.get("https://lawrencewu.herokuapp.com/lastcommit").success(function (data, xhr) {
     var time = new Date(data * 1000);
 
     document.getElementById("last-commit").innerHTML = "last commit " + timeSince(time) + " ago";
