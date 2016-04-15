@@ -22,7 +22,7 @@ define(function() {
     function renderLoggedTime(data) {
       var x = ['x'];
       var hours = ['Hours'];
-      var loggedTime = data['coding']['past_week'];
+      var loggedTime = data['coding']['hours_for_past_week'];
       // massage the data a lil bit here
       _.map(loggedTime, function(obj) {
         var date = Date.parse(moment(obj['date']).format());
