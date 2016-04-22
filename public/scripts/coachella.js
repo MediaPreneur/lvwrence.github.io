@@ -39,6 +39,9 @@ require(["superagent", "d3", "c3"], function(request, d3, c3) {
           tick: {
             format: '%H:%M:%S'
           }
+        },
+        y: {
+          label: 'bpm'
         }
       }
     });
@@ -68,6 +71,8 @@ require(["superagent", "d3", "c3"], function(request, d3, c3) {
           ['heartrate'].concat(hr),
         ]
       },
+      regions: [
+      ],
       point: {
         show: false
       },
@@ -77,6 +82,9 @@ require(["superagent", "d3", "c3"], function(request, d3, c3) {
           tick: {
             format: '%H:%M:%S'
           }
+        },
+        y: {
+          label: 'bpm'
         }
       }
     });
@@ -115,6 +123,9 @@ require(["superagent", "d3", "c3"], function(request, d3, c3) {
           tick: {
             format: '%H:%M:%S'
           }
+        },
+        y: {
+          label: 'bpm'
         }
       }
     });
