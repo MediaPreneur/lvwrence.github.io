@@ -12,10 +12,9 @@ require(["superagent", "d3", "c3"], function(request, d3, c3) {
   .end(function(err, res) {
     var body = JSON.parse(res.text);
     var data = body['activities-heart-intraday']['dataset'];
-    var x = data.map(function(obj) {
+    var xs = data.map(function(obj) {
       return obj['time'];
     });
-
     var hr = data.map(function(obj) {
       return obj['value'];
     });
@@ -26,93 +25,22 @@ require(["superagent", "d3", "c3"], function(request, d3, c3) {
         x: 'x',
         xFormat: '%H:%M:%S',
         columns: [
-          ['x'].concat(x),
+          ['x'].concat(xs),
           ['heartrate'].concat(hr),
-        ]
-      },
-      point: {
-        show: false
-      },
-      axis: {
-        x: {
-          type: 'timeseries',
-          tick: {
-            format: '%H:%M:%S'
-          }
-        },
-        y: {
-          label: 'bpm'
-        }
-      }
-    });
-  });
-
-
-  request
-  .get("https://raw.githubusercontent.com/lvwrence/coachella/master/saturday.json")
-  .end(function(err, res) {
-    var body = JSON.parse(res.text);
-    var data = body['activities-heart-intraday']['dataset'];
-    var x = data.map(function(obj) {
-      return obj['time'];
-    });
-
-    var hr = data.map(function(obj) {
-      return obj['value'];
-    });
-
-    c3.generate({
-      bindto: '#saturday',
-      data: {
-        x: 'x',
-        xFormat: '%H:%M:%S',
-        columns: [
-          ['x'].concat(x),
-          ['heartrate'].concat(hr),
-        ]
+        ],
+        type: 'spline'
       },
       regions: [
       ],
-      point: {
-        show: false
+      zoom: {
+        enabled: true
       },
-      axis: {
-        x: {
-          type: 'timeseries',
-          tick: {
-            format: '%H:%M:%S'
+      tooltip: {
+        format: {
+          value: function(name, ratio, id, index) {
+            console.log(index);
           }
-        },
-        y: {
-          label: 'bpm'
         }
-      }
-    });
-  });
-
-
-  request
-  .get("https://raw.githubusercontent.com/lvwrence/coachella/master/sunday.json")
-  .end(function(err, res) {
-    var body = JSON.parse(res.text);
-    var data = body['activities-heart-intraday']['dataset'];
-    var x = data.map(function(obj) {
-      return obj['time'];
-    });
-
-    var hr = data.map(function(obj) {
-      return obj['value'];
-    });
-
-    c3.generate({
-      bindto: '#sunday',
-      data: {
-        x: 'x',
-        xFormat: '%H:%M:%S',
-        columns: [
-          ['x'].concat(x),
-          ['heartrate'].concat(hr),
-        ]
       },
       point: {
         show: false
@@ -121,7 +49,7 @@ require(["superagent", "d3", "c3"], function(request, d3, c3) {
         x: {
           type: 'timeseries',
           tick: {
-            format: '%H:%M:%S'
+            format: '%H:%M'
           }
         },
         y: {
