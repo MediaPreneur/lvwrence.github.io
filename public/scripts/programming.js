@@ -1,8 +1,10 @@
 define(function() {
   function render(data, deps) {
+    var $ = deps['$'];
+    var _ = deps['_'];
     var moment = deps['moment'];
     var d3 = deps['d3'];
-    var _ = deps['_'];
+    var MG = deps['MG'];
 
     function renderDailyAverage(data) {
       var dailyAverage = data['coding']['daily_average'];
@@ -31,6 +33,32 @@ define(function() {
         hours.push(numHours)
       });
 
+			var bar_data = [
+				{'label': 'first', 'value':4},
+				{'label': 'second', 'value':2.1},
+				{'label': 'third', 'value':6.3},
+				{'label': 'fourth', 'value':5.7},
+				{'label': 'fifth', 'value':5},
+				{'label': 'sixth', 'value':4.2},
+				{'label': 'yet another', 'value':4.2},
+				{'label': 'and again', 'value':4.2, },
+				{'label': 'and sss', 'value':4.2}
+			];
+
+			MG.data_graphic({
+				title: "Vertical Bars",
+				description: "Work-in-progress",
+				data: bar_data,
+				chart_type: 'histogram',
+				bar_orientation: 'vertical',
+				y_accessor: 'value',
+				x_accessor: 'label',
+				width: 295,
+				height: 220,
+				right: 10,
+				animate_on_load: true,
+				target: '#logged-time'
+			});
     }
 
     renderDailyAverage(data);
