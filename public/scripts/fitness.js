@@ -1,7 +1,6 @@
 define(function() {
   function render(data, deps) {
     var moment = deps['moment'];
-    var c3 = deps['c3'];
 
 
     function renderLastWorkout(data) {
