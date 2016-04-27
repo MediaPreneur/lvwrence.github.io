@@ -60,6 +60,15 @@ define(function() {
                 labelString: 'Hours'
               }
             }]
+          },
+          tooltips: {
+            callbacks: {
+              label: function(tooltipItem, data) {
+                var hours = tooltipItem['yLabel'];
+                var duration = moment.duration(hours, 'hours');
+                return duration.humanize();
+              }
+            }
           }
         }
 			});
