@@ -19,7 +19,7 @@ define(function() {
 
       // massage the data a lil bit here
       var data = _.map(loggedTime, function(obj) {
-        var date = new Date(obj['date'])
+        var date = new Date(obj['date']).toLocaleDateString();
         var numHours = moment.duration(obj['total_seconds'], 'seconds').asHours();
         return {
           'date': date,
@@ -27,25 +27,32 @@ define(function() {
         }
       });
 
-      var ctx = document.getElementById("logged-time");
+      var labels = _.map(data, 'date');
+      var hours = _.map(data, 'hours');
+
+			var data = {
+				labels: labels,
+				datasets: [
+					{
+						data: hours,
+						borderWidth: 1,
+						backgroundColor: "#6baed6",
+						borderColor: "#3182bd",
+						hoverBackgroundColor: "#3182bd",
+						hoverBorderColor: "#3182bd",
+					}
+				]
+			};
+
+			var ctx = document.getElementById("logged-time");
       var myChart = new Chart(ctx, {
 				type: 'bar',
-				data: {
-					labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
-					datasets: [{
-						label: '# of Votes',
-						data: [12, 19, 3, 5, 2, 3]
-					}]
-				},
-				options: {
-					scales: {
-						yAxes: [{
-							ticks: {
-								beginAtZero:true
-							}
-						}]
-					}
-				}
+				data: data,
+        options: {
+          legend: {
+            display: false
+          }
+        }
 			});
     }
 

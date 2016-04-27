@@ -6,6 +6,8 @@ requirejs.config({
 
 require(["superagent", "programming", "fitness"],
 function(request, renderProgramming, renderFitness) {
+  Chart.defaults.global['maintainAspectRatio'] = false;
+
   request
   .get("https://lawrencewu.herokuapp.com/dashboard")
   .end(function(err, res) {
