@@ -51,6 +51,15 @@ define(function() {
         options: {
           legend: {
             display: false
+          },
+          scales: {
+            yAxes: [{
+              display: true,
+              scaleLabel: {
+                display: true,
+                labelString: 'Hours'
+              }
+            }]
           }
         }
 			});
