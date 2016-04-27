@@ -41,15 +41,14 @@ define(function() {
 				{'label': 'fifth', 'value':5},
 				{'label': 'sixth', 'value':4.2},
 				{'label': 'yet another', 'value':4.2},
-				{'label': 'and again', 'value':4.2, },
+				{'label': 'and again', 'value':4.2},
 				{'label': 'and sss', 'value':4.2}
 			];
 
 			MG.data_graphic({
-				title: "Vertical Bars",
-				description: "Work-in-progress",
 				data: bar_data,
-				chart_type: 'histogram',
+        full_width: true,
+				chart_type: 'bar',
 				bar_orientation: 'vertical',
 				y_accessor: 'value',
 				x_accessor: 'label',

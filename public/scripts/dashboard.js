@@ -2,10 +2,10 @@ requirejs.config({
   paths: {
     momentjs: "https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.12.0/moment.min",
     d3: "https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.0/d3.min",
-    metricsgraphics: "https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.9.0/metricsgraphics.min",
-    jquery: "https://code.jquery.com/jquery-1.11.1.min",
+    metricsgraphics: "https://cdnjs.cloudflare.com/ajax/libs/metrics-graphics/2.8.0/metricsgraphics.min",
+    jquery: "https://code.jquery.com/jquery-2.2.3.min",
     superagent: "https://cdnjs.cloudflare.com/ajax/libs/superagent/1.2.0/superagent.min",
-    lodash: "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.9.0/lodash.min",
+    lodash: "https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.9.0/lodash.min"
   }
 });
 
