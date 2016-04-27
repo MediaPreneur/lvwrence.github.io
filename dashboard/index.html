@@ -51,9 +51,7 @@ permalink: /dashboard/
                             </p>
                         </header>
                         <div class="card-content">
-                            <div class="content" id="logged-time">
-                                <!-- Stuff will be inserted here -->
-                            </div>
+                            <canvas class="content" id="logged-time"></canvas>
                         </div>
                     </div>
                 </div>
@@ -109,5 +107,10 @@ permalink: /dashboard/
     </div>
     <div class="container is-fluid sk-spinner sk-spinner-pulse" id="dashboard-loading"></div>
 </section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.11.2/lodash.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.13.0/moment.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.16/d3.min.js" defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.0.1/Chart.bundle.min.js" defer></script>
+
 <script data-main="/public/scripts/dashboard.js" src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js" defer></script>
 </div>

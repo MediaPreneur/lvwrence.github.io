@@ -1,11 +1,5 @@
 define(function() {
-  function render(data, deps) {
-    var $ = deps['$'];
-    var _ = deps['_'];
-    var moment = deps['moment'];
-    var d3 = deps['d3'];
-    var MG = deps['MG'];
-
+  function render(data) {
     function renderDailyAverage(data) {
       var dailyAverage = data['coding']['daily_average'];
       var duration = moment.duration(dailyAverage, 'seconds').humanize();
@@ -21,42 +15,37 @@ define(function() {
     }
 
     function renderLoggedTime(data) {
-      var x = ['x'];
-      var hours = ['Hours'];
       var loggedTime = data['coding']['hours_for_past_week'];
 
       // massage the data a lil bit here
-      _.map(loggedTime, function(obj) {
-        var date = Date.parse(moment(obj['date']).format());
+      var data = _.map(loggedTime, function(obj) {
+        var date = new Date(obj['date'])
         var numHours = moment.duration(obj['total_seconds'], 'seconds').asHours();
-        x.push(date);
-        hours.push(numHours)
+        return {
+          'date': date,
+          'hours': numHours
+        }
       });
 
-			var bar_data = [
-				{'label': 'first', 'value':4},
-				{'label': 'second', 'value':2.1},
-				{'label': 'third', 'value':6.3},
-				{'label': 'fourth', 'value':5.7},
-				{'label': 'fifth', 'value':5},
-				{'label': 'sixth', 'value':4.2},
-				{'label': 'yet another', 'value':4.2},
-				{'label': 'and again', 'value':4.2},
-				{'label': 'and sss', 'value':4.2}
-			];
-
-			MG.data_graphic({
-				data: bar_data,
-        full_width: true,
-				chart_type: 'bar',
-				bar_orientation: 'vertical',
-				y_accessor: 'value',
-				x_accessor: 'label',
-				width: 295,
-				height: 220,
-				right: 10,
-				animate_on_load: true,
-				target: '#logged-time'
+      var ctx = document.getElementById("logged-time");
+      var myChart = new Chart(ctx, {
+				type: 'bar',
+				data: {
+					labels: ["Red", "Blue", "Yellow", "Green", "Purple", "Orange"],
+					datasets: [{
+						label: '# of Votes',
+						data: [12, 19, 3, 5, 2, 3]
+					}]
+				},
+				options: {
+					scales: {
+						yAxes: [{
+							ticks: {
+								beginAtZero:true
+							}
+						}]
+					}
+				}
 			});
     }
 
