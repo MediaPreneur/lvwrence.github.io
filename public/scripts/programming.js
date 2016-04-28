@@ -168,8 +168,6 @@ define(function() {
 						hoverBackgroundColor: "#3182bd",
 						hoverBorderColor: "#3182bd",
 					}
-
-
 				]
 			};
 
@@ -201,15 +199,45 @@ define(function() {
           }
         }
 			});
+    }
 
+    function manageTabs() {
+      var loggedTime = document.getElementById('logged-time').parentNode.parentNode.parentNode.parentNode.parentNode;
+      var commitsMade = document.getElementById('commits-made').parentNode.parentNode.parentNode.parentNode.parentNode;
+      var linesChanged = document.getElementById('lines-changed').parentNode.parentNode.parentNode.parentNode.parentNode;
 
+      function clickTab(tab) {
+        // tabname is either "time", "commits", or "lines"
+        var tabname = tab.getAttribute('data-tab');
+
+        if (tabname === "time") {
+          loggedTime.style.display = 'block';
+          commitsMade.style.display = 'none';
+          linesChanged.style.display = 'none';
+          renderLoggedTime(data);
+        } else if (tabname === "commits") {
+          loggedTime.style.display = 'none';
+          commitsMade.style.display = 'block';
+          linesChanged.style.display = 'none';
+          renderCommitsMade(data);
+        } else if (tabname === "lines") {
+          loggedTime.style.display = 'none';
+          commitsMade.style.display = 'none';
+          linesChanged.style.display = 'block';
+          renderLinesChanged(data);
+        }
+      }
+      var tabs = document.getElementById('programming-graph-tabs');
+      tabs.addEventListener("click", function(e) {
+        clickTab(e.target);
+      });
+
+      clickTab(tabs.firstElementChild.firstElementChild);
     }
 
     renderDailyAverage(data);
     renderLoggedToday(data);
-    renderLoggedTime(data);
-    renderCommitsMade(data);
-    renderLinesChanged(data);
+    manageTabs();
   }
 
   return render;
