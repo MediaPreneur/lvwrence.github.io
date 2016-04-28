@@ -202,6 +202,7 @@ define(function() {
     }
 
     function manageTabs() {
+      var tabs = document.getElementById('programming-graph-tabs');
       var loggedTime = document.getElementById('logged-time').parentNode.parentNode.parentNode.parentNode.parentNode;
       var commitsMade = document.getElementById('commits-made').parentNode.parentNode.parentNode.parentNode.parentNode;
       var linesChanged = document.getElementById('lines-changed').parentNode.parentNode.parentNode.parentNode.parentNode;
@@ -209,7 +210,15 @@ define(function() {
       function clickTab(tab) {
         // tabname is either "time", "commits", or "lines"
         var tabname = tab.getAttribute('data-tab');
+        if (!tabname) {
+          return
+        }
 
+        // clear all active
+        _.map(tabs.children, function(li) {
+          li.className = "";
+        });
+        tab.parentNode.className = "is-active";
         if (tabname === "time") {
           loggedTime.style.display = 'block';
           commitsMade.style.display = 'none';
@@ -227,11 +236,13 @@ define(function() {
           renderLinesChanged(data);
         }
       }
-      var tabs = document.getElementById('programming-graph-tabs');
+
+      // add event listener
       tabs.addEventListener("click", function(e) {
         clickTab(e.target);
       });
 
+      // initialize
       clickTab(tabs.firstElementChild.firstElementChild);
     }
 
