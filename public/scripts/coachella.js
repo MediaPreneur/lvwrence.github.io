@@ -159,7 +159,7 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
 
     var markers = [
       {
-        'date': new Date(2016, 3, 17, 0, 0, 0),
+        'date': new Date(2016, 3, 17, 0, 15, 0),
         'label': 'RL Grime',
         'click': function() {
           window.open('https://www.youtube.com/watch?v=04ufimjXEbA', '_blank');
