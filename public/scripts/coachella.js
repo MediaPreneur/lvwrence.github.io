@@ -22,10 +22,45 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
       };
     });
 
-    var markers = [{
-        'date': new Date(2016, 3, 15, 3, 0, 0),
-        'label': 'Look, a spike!'
-    }];
+    var markers = [
+      {
+        'date': new Date(2016, 3, 15, 4, 45, 0),
+        'label': 'Wake up'
+      },
+      {
+        'date': new Date(2016, 3, 15, 6, 30, 0),
+        'label': 'Flight'
+      },
+      {
+        'date': new Date(2016, 3, 15, 9, 45, 0),
+        'label': 'Arrive'
+      },
+      {
+        'date': new Date(2016, 3, 15, 12, 0, 0),
+        'label': 'Set up tent'
+      },
+      {
+        'date': new Date(2016, 3, 15, 17, 15, 0),
+        'label': 'DJ Mustard',
+        'click': function() {
+          window.open('https://www.youtube.com/watch?v=cZaJYDPY-YQ', '_blank');
+        }
+      },
+      {
+        'date': new Date(2016, 3, 15, 22, 05, 0),
+        'label': 'Jack Ü',
+        'click': function() {
+          window.open('https://www.youtube.com/watch?v=nntGTK2Fhb0', '_blank');
+        }
+      },
+      {
+        'date': new Date(2016, 3, 15, 23, 10, 0),
+        'label': 'LCD Soundsystem',
+        'click': function() {
+          window.open('https://www.youtube.com/watch?v=9L8yEDcZ-QI', '_blank');
+        }
+      },
+    ];
 
     MG.data_graphic({
         data: data,
@@ -33,8 +68,15 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
         height: 300,
         right: 40,
         markers: markers,
-        target: '#friday'
-    });
+				target: '#friday',
+				mouseover: function(d, i) {
+          var time = moment(d['date']).format("H:mm");
+					// custom format the rollover text, show days
+					var prefix = d3.formatPrefix(d.value);
+					d3.select('#friday svg .mg-active-datapoint')
+					.text(time + ' - ' + d['value'] + ' bpm');
+				},
+		});
   });
 
   // SATURDAY
@@ -51,10 +93,37 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
       };
     });
 
-    var markers = [{
-        'date': new Date(2016, 3, 16, 3, 0, 0),
-        'label': 'Look, a spike!'
-    }];
+    var markers = [
+      {
+        'date': new Date(2016, 3, 16, 1, 0, 0),
+        'label': 'Sleep'
+      },
+      {
+        'date': new Date(2016, 3, 16, 9, 0, 0),
+        'label': 'Wake up'
+      },
+      {
+        'date': new Date(2016, 3, 16, 16, 55, 0),
+        'label': 'Run the Jewels',
+        'click': function() {
+          window.open('https://www.youtube.com/watch?v=OZiymsOX6To', '_blank');
+        }
+      },
+      {
+        'date': new Date(2016, 3, 16, 19, 35, 0),
+        'label': 'Disclosure',
+        'click': function() {
+          window.open('https://www.youtube.com/watch?v=fB63ztKnGvo', '_blank');
+        }
+      },
+      {
+        'date': new Date(2016, 3, 16, 22, 30, 0),
+        'label': 'Guns N\' Roses',
+        'click': function() {
+          window.open('https://www.youtube.com/watch?v=1w7OgIMMRc4', '_blank');
+        }
+      },
+    ];
 
     MG.data_graphic({
         data: data,
@@ -62,7 +131,14 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
         height: 300,
         right: 40,
         markers: markers,
-        target: '#saturday'
+        target: '#saturday',
+        mouseover: function(d, i) {
+          var time = moment(d['date']).format("H:mm");
+					// custom format the rollover text, show days
+					var prefix = d3.formatPrefix(d.value);
+					d3.select('#saturday svg .mg-active-datapoint')
+					.text(time + ' - ' + d['value'] + ' bpm');
+				}
     });
   });
 
@@ -81,10 +157,44 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
       };
     });
 
-    var markers = [{
-        'date': new Date(2016, 3, 17, 3, 0, 0),
-        'label': 'Look, a spike!'
-    }];
+    var markers = [
+      {
+        'date': new Date(2016, 3, 17, 0, 0, 0),
+        'label': 'RL Grime',
+        'click': function() {
+          window.open('https://www.youtube.com/watch?v=04ufimjXEbA', '_blank');
+        }
+      },
+      {
+        'date': new Date(2016, 3, 17, 1, 55, 0),
+        'label': 'Sleep'
+      },
+      {
+        'date': new Date(2016, 3, 17, 8, 0, 0),
+        'label': 'Wake up',
+      },
+      {
+        'date': new Date(2016, 3, 17, 16, 50, 0),
+        'label': 'Hudson Mohawke',
+        'click': function() {
+          window.open('https://www.youtube.com/watch?v=k_MWuP2Qj7U', '_blank');
+        }
+      },
+      {
+        'date': new Date(2016, 3, 17, 19, 30, 0),
+        'label': 'Major Lazer',
+        'click': function() {
+          window.open('https://www.youtube.com/watch?v=YqeW9_5kURI', '_blank');
+        }
+      },
+      {
+        'date': new Date(2016, 3, 17, 21, 35, 0),
+        'label': 'Flume',
+        'click': function() {
+          window.open('https://www.youtube.com/watch?v=Ly7uj0JwgKg', '_blank');
+        }
+      }
+    ];
 
     MG.data_graphic({
         data: data,
@@ -92,7 +202,14 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
         height: 300,
         right: 40,
         markers: markers,
-        target: '#sunday'
+        target: '#sunday',
+        mouseover: function(d, i) {
+          var time = moment(d['date']).format("H:mm");
+					// custom format the rollover text, show days
+					var prefix = d3.formatPrefix(d.value);
+					d3.select('#sunday svg .mg-active-datapoint')
+					.text(time + ' - ' + d['value'] + ' bpm');
+				}
     });
   });
 });
