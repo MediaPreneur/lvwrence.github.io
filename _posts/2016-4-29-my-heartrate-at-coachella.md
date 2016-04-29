@@ -4,8 +4,8 @@ title: My Heartrate at Coachella
 ---
 
 I wore my Fitbit to Coachella. Here's the data I scraped from it afterwards.
-Give it some time to load — at 12 samples per minute, there are 17,280 data
-points per graph!
+Give it some time to load — at 12 samples per minute, there are about
+17,280 data points per graph! Also click on the artists for a neat preview.
 
 <h3>Friday</h3>
 <div id="friday" style="width: 100%; height: 300px;"></div>
