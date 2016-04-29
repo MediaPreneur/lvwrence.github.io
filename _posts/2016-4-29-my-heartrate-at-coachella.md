@@ -1,6 +1,6 @@
 ---
 layout: post
-title: I measured my heartrate at Coachella 2016
+title: I measured my heartrate at Coachella
 ---
 
 I wore my Fitbit to Coachella. Here's the data I scraped from it afterwards.
