@@ -12,7 +12,7 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
   if (screen.width <= 1000) {
     $('#friday').append($('<a href="/public/images/friday.png"><img src="/public/images/friday.png" style="width: 100%;" /></a>'));
     $('#saturday').append($('<a href="/public/images/saturday.png"><img src="/public/images/saturday.png" style="width: 100%;" /></a>'));
-    $('#sunday').append($('<a href="/public/images/saturday.png"><img src="/public/images/sunday.png" style="width: 100%;" /></a>'));
+    $('#sunday').append($('<a href="/public/images/sunday.png"><img src="/public/images/sunday.png" style="width: 100%;" /></a>'));
   } else {
   // FRIDAY
   request
