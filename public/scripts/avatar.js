@@ -6,6 +6,8 @@ var possibleImages = [
   'av5.jpg',
   'av6.jpg',
   'av7.jpg',
+  'av8.jpg',
+  'av9.jpg',
 ];
 
 // make sure we don't see the same av consecutively
