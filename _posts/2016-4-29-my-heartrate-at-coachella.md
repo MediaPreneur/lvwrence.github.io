@@ -14,6 +14,7 @@ Give it some time to load — at 12 samples per minute, there are about
 <h3>Sunday</h3>
 <div id="sunday" style="width: 100%; min-height: 300px;"></div>
 
+<script src="//cdnjs.cloudflare.com/ajax/libs/mobile-detect/1.3.2/mobile-detect.min.js" defer></script>
 <script data-main="/public/scripts/coachella"
         src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.2.0/require.min.js"
         defer></script>

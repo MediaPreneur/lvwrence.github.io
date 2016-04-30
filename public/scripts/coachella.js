@@ -8,6 +8,13 @@ requirejs.config({
 });
 
 require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
+  // check for mobile, and if it is then just show static images
+  var md = new MobileDetect(window.navigator.userAgent);
+  if (md.is('mobile')) {
+    $('#friday').append($('<a href="/public/images/friday.png"><img src="/public/images/friday.png" style="width: 100%;" /></a>'));
+    $('#saturday').append($('<a href="/public/images/saturday.png"><img src="/public/images/saturday.png" style="width: 100%;" /></a>'));
+    $('#sunday').append($('<a href="/public/images/saturday.png"><img src="/public/images/sunday.png" style="width: 100%;" /></a>'));
+  } else {
   // FRIDAY
   request
   .get("https://raw.githubusercontent.com/lvwrence/coachella/master/friday.json")
@@ -65,7 +72,7 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
     MG.data_graphic({
         data: data,
         full_width: true,
-        height: 300,
+        full_height: true,
         right: 40,
         markers: markers,
 				target: '#friday',
@@ -128,7 +135,7 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
     MG.data_graphic({
         data: data,
         full_width: true,
-        height: 300,
+        full_height: true,
         right: 40,
         markers: markers,
         target: '#saturday',
@@ -199,7 +206,7 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
     MG.data_graphic({
         data: data,
         full_width: true,
-        height: 300,
+        full_height: true,
         right: 40,
         markers: markers,
         target: '#sunday',
@@ -212,4 +219,5 @@ require(["superagent", "d3", "metricsgraphics"], function(request, d3, MG) {
 				}
     });
   });
+  }
 });
