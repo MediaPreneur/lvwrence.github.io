@@ -10,7 +10,7 @@ posted the link on reddit and Product Hunt and...not much happened. About 15
 or so people briefly messaged Jarvis and then left. We went home, dejected, and
 slept.
 
-Two days later, Jarvis had over 5000 users and was featured on some [cool sites](https://www.producthunt.com/tech/jarvis-2)
+Two days later, Jarvis had over 5000 users and got featured on some [cool sites](https://www.producthunt.com/tech/jarvis-2)
 [like these](http://lifehacker.com/jarvis-is-a-facebook-chat-bot-that-can-handle-your-remi-1776834190?utm_campaign=socialflow_lifehacker_facebook&utm_source=lifehacker_facebook&utm_medium=socialflow). We have now sent <span id="jarvis-post-num-reminders">over 13000</span> reminders to <span id="jarvis-post-num-users">over 8000</span> users,
 and migrated our parser to wit.ai. But in the crucial first forty-eight hours, here's how things went down.
 
