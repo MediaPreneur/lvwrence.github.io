@@ -34,7 +34,7 @@ at a tournament. 10 minutes later we were seeing 200s again. Luckily, Facebook
 buffers any requests that didn't 200 so we could still backfill the missed
 requests. We went back to sleep soon after that little incident.
 
-**Lesson learned**: I don't know, something about unicode.
+**Lesson learned**: Be careful around Unicode.
 
 **Hours 12-24**
 We grabbed brunch nearby and started talking about our future billions. I upgraded
