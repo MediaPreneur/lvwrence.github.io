@@ -3,7 +3,7 @@ layout: post
 title: Scaling Jarvis from 5 to 5000 users in forty-eight hours
 ---
 
-Last Saturday, Daniel and I were ready to launch our side project, [Jarvis](http://hellojarvis.io), to
+Last Saturday, [Daniel](http://danielballe.com/) and I were ready to launch our side project, [Jarvis](http://hellojarvis.io), to
 the world. We had been building and dogfooding it for about three weeks and
 were excited for people other than our friends—real people—to try it out. We
 posted the link on reddit and Product Hunt and...not much happened. About 15
