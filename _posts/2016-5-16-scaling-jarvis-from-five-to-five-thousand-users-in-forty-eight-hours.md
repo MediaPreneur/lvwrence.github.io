@@ -10,8 +10,8 @@ posted the link on reddit and Product Hunt and...not much happened. About 15
 or so people briefly messaged Jarvis and then left. We went home, dejected, and
 slept.
 
-Two days later, Jarvis had over 5000 users and was featured on some cool sites
-like this. We now have {} users and served {} reminders. Here's how things went
+Two days later, Jarvis had over 5000 users and was featured on some [cool sites](https://www.producthunt.com/tech/jarvis-2)
+[like these](http://lifehacker.com/jarvis-is-a-facebook-chat-bot-that-can-handle-your-remi-1776834190?utm_campaign=socialflow_lifehacker_facebook&utm_source=lifehacker_facebook&utm_medium=socialflow). We have now sent <span id="jarvis-post-num-reminders">over 13000</span> reminders to <span id="jarvis-post-num-users">over 8000</span> users. Here's how things went
 down.
 
 **Hours 0-12**
@@ -38,7 +38,7 @@ requests. We went back to sleep soon after that little incident.
 
 **Hours 12-24**
 We grabbed brunch nearby and started talking about our future billions. I upgraded
-our dynos and went home and ~~created a test framework~~ continued writing good tests
+our dynos and went home and <del>created a test framework</del> continued writing good tests
 like any good software developer who always writes good tests.
 
 **Lesson learned**: Nothing much, really. Things were pretty good at this point.
@@ -73,3 +73,5 @@ to me again. Things are looking pretty good.
 
 **Lesson learned**: Make tiny products that have a disproportionately large
 return on investment. Build things people want. Don't dump someone for no good reason.
+
+<script src="/public/scripts/jarvis.js" defer></script>
