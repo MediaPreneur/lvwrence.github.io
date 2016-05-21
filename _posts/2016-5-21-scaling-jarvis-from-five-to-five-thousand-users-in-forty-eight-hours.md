@@ -71,6 +71,6 @@ so we did it. We also finished the migration from Redis to Postgres with very
 few problems. We were still getting a shitton of users, my ex started talking
 to me again, and things are looking pretty good.
 
-**Lesson learned**: Don't dump someone because "distance" if you actually really love them.
+**Lesson learned**: Make tiny, immediately useful things to validate your market.
 
 <script src="/public/scripts/jarvis.js" defer></script>
