@@ -23,7 +23,7 @@ roh. I checked the logs again. 500s all over the place. Jarvis was down. Someone
 sent some weird unicode that we didn't decode properly. Fuck fuck fuck. I woke
 Daniel up and he got to debugging the issue while I messaged all our new users
 to tell them that we were having issues and could they please hold on for a
-second. 15 minutes later, Daniel pushed a fix. Thank god. We could rest
+second. 15 minutes later, he pushed a fix. Thank god. We could rest
 easy...for about five minutes, when something else broke. We ran into our Google
 Maps Geocoding API limit of 2,500 requests per day. We quickly generated a new
 API key but Google said it could take a while. Meanwhile, a ton of people were
