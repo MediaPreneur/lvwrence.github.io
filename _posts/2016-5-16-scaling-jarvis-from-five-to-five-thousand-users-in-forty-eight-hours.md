@@ -45,7 +45,7 @@ like any good software developer who always writes good tests.
 
 **Hours 24-36**
 Monday morning. I woke up and everything was on fire. I checked the logs and
-everything was down again. Goddammit. We were getting hit with 150 requests
+we were down again. Goddammit. We were getting hit with 150 requests
 per minute thanks to the Lifehacker article. Luckily, the fix was super
 straightforward (we had missed a unicode conversion)  and I pushed it like
 five minutes after waking up #mlgskills #realtalk. Jarvis was down for a
