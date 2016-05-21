@@ -68,10 +68,9 @@ Things are getting stable. It looked like we were going to hit our API limit
 with Google again but if you attach your credit card to your developer account
 you can pay 50 cents for every extra 1000 requests. This is a pretty good deal,
 so we did it. We also finished the migration from Redis to Postgres with very
-few problems. We were still getting a shitton of users and my ex started talking
-to me again. Things are looking pretty good.
+few problems. We were still getting a shitton of users, my ex started talking
+to me again, and things are looking pretty good.
 
-**Lesson learned**: Make tiny products that have a disproportionately large
-return on investment. Build things people want. Don't dump someone for no good reason.
+**Lesson learned**: Don't dump someone because of "distance" if you actually really love them.
 
 <script src="/public/scripts/jarvis.js" defer></script>
