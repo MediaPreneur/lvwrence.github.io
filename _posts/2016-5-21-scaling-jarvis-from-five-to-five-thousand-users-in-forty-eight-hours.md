@@ -31,7 +31,7 @@ messaging Jarvis and probably bouncing because he was unresponsive. My palms
 were sweaty but my knees and arms were alright. This was the most exciting
 time of my life, except for the time I played this really good guy at Smash 64
 at a tournament. 10 minutes later we were seeing 200s again. Luckily, Facebook
-buffers any requests that didn't get 200 so we could still backfill the missed
+buffers any requests that didn't 200 so we could still backfill the missed
 requests. We went back to sleep soon after that little incident.
 
 **Lesson learned**: I don't know, something about unicode.
