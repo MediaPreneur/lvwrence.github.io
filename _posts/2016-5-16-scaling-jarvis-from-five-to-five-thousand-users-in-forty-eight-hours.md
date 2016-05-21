@@ -51,7 +51,7 @@ straightforward (we had missed a unicode conversion)  and I pushed it like
 five minutes after waking up #mlgskills #realtalk. Jarvis was down for a
 total of about 30 minutes at this point, and we probably lost a bunch of
 traffic. Oh well, not much we can do about that. Then our Redis cluster
-started getting really slow to query. Like, 1 second per query. It may have
+started getting really slow. Like, 1 second per query slow. It may have
 had something to do with us just stuffing all our data into two keys. Then
 we lost connection to the cluster and dropped some users. This was not
 good. I contacted RedisToGo and they told me they were investigating it.
