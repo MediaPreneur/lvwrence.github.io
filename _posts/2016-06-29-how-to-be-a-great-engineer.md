@@ -26,7 +26,7 @@ Here are the qualities that I think make a great engineer.
     communicate with other people, whether it be about code, architecture, or product. In these situations,
     you want to be able to understand the other person's concerns to know exactly what you should be working on,
     and why. I've definitely been caught in the pitfall of building things for the sake of building things,
-    with the end result being wasted work.
+    with the end result being lots of wasted work.
 * Sense of style
     * Good code is very 'I know it when I see it'. There's no objective metric that captures code quality, and it's definitely not just about [following PEP8](https://www.youtube.com/watch?v=wf-BqAjZb8M). It's all
     a tug-of-war between choosing the correct abstractions and finding flexibility. To write clean, elegant code,
