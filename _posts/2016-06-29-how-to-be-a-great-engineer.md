@@ -33,4 +33,4 @@ Here are the qualities that I think make a great engineer.
     you absolutely need a sense of style. To this day, some of the nicest code I've seen has been written by [Jae Wie](https://github.com/jaewie/algorithms),
     who has an habit of relentlessly destroying unnecessary code.
 
-I'm probably missing some more qualities, and I'd love to hear your opinion on what makes a great engineer. Hacker News discussion [here](https://news.ycombinator.com/).
+I'm probably missing some more qualities, and I'd love to hear your opinion on what makes a great engineer. Hacker News discussion [here](https://news.ycombinator.com/item?id=12000235).
