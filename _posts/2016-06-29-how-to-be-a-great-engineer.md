@@ -15,7 +15,8 @@ Here are the qualities that I think make a great engineer.
     but this was a revelation to me. I don't think I would have ever thought of doing that. Imagine applying
     that mentality to everything you do. Skills and knowledge compound like interest, and it truly is
     worthwhile to stop to think about whether there's a better of way of doing what you're doing instead
-    of mindlessly doing what you've always done because it's easy and you're used to it.
+    of mindlessly doing what you've always done because it's easy and you're used to it. Wow that was a long
+    and complicated sentence but I'm glad you stuck through it.
 * Unstoppable drive
     * Great programmers don't let anything stop them. Bug in the system library? Fix it. Some person or org blocking you?
     Find a workaround. Need to shave a giant fucking yak to finish the job? Just do it with the smallest amount of
