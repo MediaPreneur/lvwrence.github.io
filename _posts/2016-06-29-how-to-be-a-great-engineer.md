@@ -33,4 +33,7 @@ Here are the qualities that I think make a great engineer.
     you absolutely need a sense of style. To this day, some of the nicest code I've seen has been written by [Jae Wie](https://github.com/jaewie/algorithms),
     who has an habit of relentlessly destroying unnecessary code.
 
+If you're interested in this kind of stuff, you should probably read Khan Academy's [Engineering Principles](https://docs.google.com/document/d/1PW4NYn9pYNam2EuGEsTN9pTgwTfFnT_R9OZLJJICWQU/edit) and [Career Development Guide](https://docs.google.com/document/d/1qr0d05X5-AsyDYqKRCfgGGcWSshTMd_vfTggfhDpbls/edit).
+KA Engineering has a really high bar and it would probably be great working there (hint hint, any KA recruiters).
+
 I'm probably missing some more qualities, and I'd love to hear your opinion on what makes a great engineer. Hacker News discussion [here](https://news.ycombinator.com/item?id=12000235).
