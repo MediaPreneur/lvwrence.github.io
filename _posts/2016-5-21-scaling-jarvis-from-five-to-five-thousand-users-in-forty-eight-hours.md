@@ -17,10 +17,9 @@ and migrated our parser to wit.ai. But in the crucial first forty-eight hours, h
 **Hours 0-12**
 I woke up in the middle of the night and checked Product Hunt and we were right
 there, trending on the front page. People were actually trying Jarvis out. I
-checked the Heroku logs. Holy shit, logs were scrolling down the screen like in
-the Matrix. All was well and good, until we stopped responding to messages. Ruh
-roh. I checked the logs again. 500s all over the place. Jarvis was down. Someone
-sent some weird unicode that we didn't decode properly. Fuck fuck fuck. I woke
+checked the Heroku logs. Holy shit. Logs were scrolling like
+the Matrix. All was well and good, until we stopped responding to messages. I checked the logs again.
+We were 500'ing all over the place. Someone sent some weird unicode that we didn't decode properly. I woke
 Daniel up and he got to debugging the issue while I messaged all our new users
 to tell them that we were having issues and could they please hold on for a
 second. 15 minutes later, he pushed a fix. Thank god. We could rest
