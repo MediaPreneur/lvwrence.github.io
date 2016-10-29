@@ -1,9 +1,14 @@
+# Gems
+gems:
+    - jekyll-paginate
+
 # Site settings
 title: 43.659612, -79.396832
 email: lawrence@lawrencewu.me
 baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://lawrencewu.me" # the base hostname & protocol for your site
 github_username:  lvwrence
+paginate: 5
 
 # Build settings
 markdown: kramdown
