@@ -1,10 +1,10 @@
 var possibleImages = [
   'av1.png',
   'av2.jpg',
-  'av3.jpg',
+  // 'av3.jpg',
   'av4.jpg',
   'av5.jpg',
-  'av6.jpg',
+  // 'av6.jpg',
   'av7.jpg',
   'av8.jpg',
   'av9.jpg',
