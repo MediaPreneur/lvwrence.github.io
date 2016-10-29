@@ -9,6 +9,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "http://lawrencewu.me" # the base hostname & protocol for your site
 github_username:  lvwrence
 paginate: 5
+paginate_path: "page/:num"
 
 # Build settings
 markdown: kramdown
