@@ -1,15 +1,12 @@
 ---
 layout: post
-title: 20161028.plan
+title: The Beginner's Guide to Options
 ---
-The Beginner's Guide to Options
 
 Options are a really interesting type of financial security. They are themselves part of a broader group of securities
 called derivatives. Derivatives, as the name suggests, derive their value from something else. This "something else" can
 be a stock, the outcome of some event, or even another derivative! Anyway, let's focus on options, which typically derive
-their value from the price of a stock. In this post, I aim to introduce call and put options.
-
-The Basics
+their value from the price of a stock.
 
 An option is essentially a contract between two parties that gives the buyer of the option the right to buy or the right
 to sell some underlying thing at a specified price. This is useful for a few reasons. If I think a stock's price will go
