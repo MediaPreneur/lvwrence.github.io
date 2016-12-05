@@ -1,6 +1,6 @@
 ---
 layout: post
-title: A Brief Primer to Options
+title: A Brief Primer on Options
 ---
 
 Options are a really interesting type of financial security. They are themselves part of a broader group of securities
