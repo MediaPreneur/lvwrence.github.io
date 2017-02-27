@@ -134,4 +134,6 @@ Here are the results:
 	<tr><td>to go to the DMV</td><td>29</td><td>0.038%</td></tr>
 </table>
 
+Some of those are pretty...interesting.
+
 If you found Jarvis useful, don't forget to [donate](http://hellojarvis.io/)!
