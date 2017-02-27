@@ -8,7 +8,7 @@ commonly asked reminders. Thanks to our very liberal [privacy policy](http://hel
 I used [Heroku Dataclips](https://devcenter.heroku.com/articles/dataclips) to download a JSON-formatted
 list of reminders, and then used this short script to count the 100 most common reminders:
 
-{% highlight python3 linenos %}
+```python
 from collections import Counter
 import json
 
@@ -22,7 +22,7 @@ for reminder in reminders:
     c[message] += 1
 
 print(c.most_common(100))
-{% endhighlight %}
+```
 
 Here are the results:
 
