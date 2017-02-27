@@ -1,8 +1,8 @@
-table {
+table#most-common-reminders {
     border-collapse: collapse;
 }
 
-table, th, td {
+table#most-common-reminders, #most-common-reminders > th, #most-common-reminders td {
     border: 1px solid #d3d6db;
     padding: 10px;
 }

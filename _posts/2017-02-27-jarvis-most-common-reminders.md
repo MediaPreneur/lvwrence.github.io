@@ -26,7 +26,7 @@ print(c.most_common(100))
 
 Here are the results:
 
-<table>
+<table id="most-common-reminders">
 	<tr>
 		<th>Reminder</th>
 		<th>Count</th>
