@@ -6,7 +6,7 @@ Well, it's midterm season, which means I'm doing anything except studying for my
 I thought it would be interesting to go through all the reminders [Jarvis](http://hellojarvis.io/) has received and find the most
 commonly asked reminders. Thanks to our very liberal [privacy policy](http://hellojarvis.io/privacy/),
 I used [Heroku Dataclips](https://devcenter.heroku.com/articles/dataclips) to download a JSON-formatted
-list of reminders, and then used this short script to count the 100 most common reminders:
+list of reminders, and then wrote this short script to count the 100 most common reminders:
 
 ```python
 from collections import Counter
