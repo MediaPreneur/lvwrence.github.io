@@ -3,7 +3,7 @@ function checkAndSetCurrentlyPlaying() {
     var currentSong = snapshot.val()
     var name = currentSong['song']['metadata']['title'];
     var artist = currentSong['song']['metadata']['artist'];
-    var currentlyListeningTo = "current listening to " + name;
+    var currentlyListeningTo = "currently listening to " + name;
     if (artist != null) {
       currentlyListeningTo += " by " + artist;
     }
