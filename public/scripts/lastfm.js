@@ -5,7 +5,7 @@ function checkAndSetCurrentlyPlaying() {
     var artist = currentSong['song']['metadata']['artist'];
     var currentlyListeningTo = "current listening to " + name;
     if (artist != null) {
-      currentListeningTo += " by " + artist;
+      currentlyListeningTo += " by " + artist;
     }
     document.getElementById("currently-playing").innerHTML = currentlyListeningTo
   })
